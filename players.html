@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liverpool FC — Players</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page">
+  <div class="bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Anfield%20stadium%20in%20May%202024.jpg');"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="badge">LFC</div>
+        <div>Liverpool FC</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Live</a>
+        <a href="stadium.html">Stadium</a>
+        <a href="squad.html">Squad</a>
+        <a class="active" href="players.html">Players</a>
+        <a href="champions.html">Champions</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="kicker">
+        <span class="dot"></span>
+        Player Spotlight
+      </div>
+      <h1>Top Performers</h1>
+      <p>Featured players, stats, and recent form analysis.</p>
+    </section>
+
+    <!-- Featured Player Spotlight -->
+    <section class="grid">
+      <div class="player-spotlight-card card" style="grid-column: span 12;">
+        <div class="spotlight-header">
+          <div>
+            <h2 class="player-name">Mohamed Salah</h2>
+            <p class="player-position">Forward • #11</p>
+          </div>
+          <div class="player-rating">
+            <div class="rating-value">9.2</div>
+            <div class="rating-label">Rating</div>
+          </div>
+        </div>
+
+        <div class="player-stats-grid">
+          <div class="player-stat">
+            <div class="stat-number">23</div>
+            <div class="stat-name">Goals</div>
+          </div>
+          <div class="player-stat">
+            <div class="stat-number">12</div>
+            <div class="stat-name">Assists</div>
+          </div>
+          <div class="player-stat">
+            <div class="stat-number">89%</div>
+            <div class="stat-name">Pass Acc.</div>
+          </div>
+          <div class="player-stat">
+            <div class="stat-number">25</div>
+            <div class="stat-name">Appearances</div>
+          </div>
+        </div>
+
+        <div class="performance-chart">
+          <h3>Last 10 Matches Performance</h3>
+          <canvas id="performance-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Scorers -->
+    <section class="grid">
+      <div class="card" style="grid-column: span 6;">
+        <h3>⚽ Top Scorers</h3>
+        <div class="player-list">
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#11</span>
+              <span class="player-name-list">Mohamed Salah</span>
+            </div>
+            <span class="player-value highlight">23</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#9</span>
+              <span class="player-name-list">Alexander Isak</span>
+            </div>
+            <span class="player-value highlight">18</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#18</span>
+              <span class="player-name-list">Cody Gakpo</span>
+            </div>
+            <span class="player-value highlight">12</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#7</span>
+              <span class="player-name-list">Florian Wirtz</span>
+            </div>
+            <span class="player-value highlight">9</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#8</span>
+              <span class="player-name-list">Dominik Szoboszlai</span>
+            </div>
+            <span class="player-value highlight">7</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: span 6;">
+        <h3>🎯 Top Assists</h3>
+        <div class="player-list">
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#11</span>
+              <span class="player-name-list">Mohamed Salah</span>
+            </div>
+            <span class="player-value highlight">12</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#7</span>
+              <span class="player-name-list">Florian Wirtz</span>
+            </div>
+            <span class="player-value highlight">11</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#8</span>
+              <span class="player-name-list">Dominik Szoboszlai</span>
+            </div>
+            <span class="player-value highlight">8</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#26</span>
+              <span class="player-name-list">Andrew Robertson</span>
+            </div>
+            <span class="player-value highlight">7</span>
+          </div>
+          <div class="player-list-item">
+            <div class="player-info">
+              <span class="player-num">#10</span>
+              <span class="player-name-list">Alexis Mac Allister</span>
+            </div>
+            <span class="player-value highlight">6</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Form Graph -->
+    <section class="grid">
+      <div class="card" style="grid-column: span 12;">
+        <h3>📊 Team Form - Last 15 Matches</h3>
+        <div class="form-graph-container">
+          <canvas id="form-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Players Grid -->
+    <section class="grid">
+      <div class="card player-card">
+        <div class="player-card-header">
+          <h4>Virgil van Dijk</h4>
+          <span class="player-num-badge">#4</span>
+        </div>
+        <p class="player-position">Defender</p>
+        <div class="player-mini-stats">
+          <span>25 Apps</span>
+          <span>•</span>
+          <span>3 Goals</span>
+          <span>•</span>
+          <span>8.5 Rating</span>
+        </div>
+      </div>
+
+      <div class="card player-card">
+        <div class="player-card-header">
+          <h4>Alisson Becker</h4>
+          <span class="player-num-badge">#1</span>
+        </div>
+        <p class="player-position">Goalkeeper</p>
+        <div class="player-mini-stats">
+          <span>24 Apps</span>
+          <span>•</span>
+          <span>15 Clean Sheets</span>
+          <span>•</span>
+          <span>8.7 Rating</span>
+        </div>
+      </div>
+
+      <div class="card player-card">
+        <div class="player-card-header">
+          <h4>Ryan Gravenberch</h4>
+          <span class="player-num-badge">#38</span>
+        </div>
+        <p class="player-position">Midfielder</p>
+        <div class="player-mini-stats">
+          <span>23 Apps</span>
+          <span>•</span>
+          <span>4 Goals</span>
+          <span>•</span>
+          <span>8.3 Rating</span>
+        </div>
+      </div>
+
+      <div class="card player-card">
+        <div class="player-card-header">
+          <h4>Florian Wirtz</h4>
+          <span class="player-num-badge">#7</span>
+        </div>
+        <p class="player-position">Midfielder</p>
+        <div class="player-mini-stats">
+          <span>20 Apps</span>
+          <span>•</span>
+          <span>9 Goals</span>
+          <span>•</span>
+          <span>8.9 Rating</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">Player stats updated daily</div>
+  </main>
+
+  <script src="particles.js"></script>
+  <script src="scroll-animations.js"></script>
+  <script src="player-charts.js"></script>
+</body>
+</html>

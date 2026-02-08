@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Squad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page">
+  <div class="bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Anfield%20stadium%20in%20May%202024.jpg');"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="badge">LFC</div>
+        <div>Liverpool FC</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Live</a>
+        <a href="stadium.html">Stadium</a>
+        <a class="active" href="squad.html">Squad</a>
+        <a href="players.html">Players</a>
+        <a href="champions.html">Champions</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="kicker"><span class="dot"></span> Squad Hub</div>
+      <h1>The Squad</h1>
+      <p>
+        Two views: <span class="highlight">Right now (confirmed changes)</span> and the
+        <span class="highlight">Full Premier League 25-man squad list</span>.
+      </p>
+
+      <div class="media-row">
+        <div class="media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Anfield%20stadium%20in%20May%202024.jpg" alt="Anfield" />
+        </div>
+        <div class="media tall">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Liverpool%20Manager%20Arne%20Slot%20(cropped).jpg" alt="Arne Slot" />
+        </div>
+      </div>
+    </section>
+
+    <section class="tabs" aria-label="Squad tabs">
+      <div class="tabbar" role="tablist" aria-label="Squad views">
+        <button class="tabbtn" id="tab-now" role="tab" aria-selected="true" aria-controls="panel-now">
+          Right now (Confirmed)
+        </button>
+        <button class="tabbtn" id="tab-full" role="tab" aria-selected="false" aria-controls="panel-full">
+          Full squad list (PL 25-man)
+        </button>
+      </div>
+
+      <!-- TAB 1: RIGHT NOW (CONFIRMED) -->
+      <div class="tabpanel active" id="panel-now" role="tabpanel" aria-labelledby="tab-now">
+        <div class="table-wrap">
+          <table>
+            <caption>Right now — confirmed arrivals + number changes</caption>
+            <thead>
+              <tr>
+                <th style="width: 30%;">Category</th>
+                <th>Confirmed details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Arrivals (LFC confirmed numbers)</strong></td>
+                <td>
+                  <ul class="clean">
+                    <li><span class="highlight">#7 Florian Wirtz</span></li>
+                    <li><span class="highlight">#6 Milos Kerkez</span></li>
+                    <li><span class="highlight">#30 Jeremie Frimpong</span></li>
+                    <li><span class="highlight">#22 Hugo Ekitike</span></li>
+                    <li><span class="highlight">#25 Giorgi Mamardashvili</span></li>
+                    <li><span class="highlight">#28 Freddie Woodman</span></li>
+                    <li><span class="highlight">#41 Ármin Pécsi</span></li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Number changes (LFC confirmed)</strong></td>
+                <td>
+                  <ul class="clean">
+                    <li><span class="highlight">Conor Bradley:</span> 84 → 12</li>
+                    <li><span class="highlight">Trey Nyoni:</span> 98 → 42</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Premier League confirmed</strong></td>
+                <td>
+                  <ul class="clean">
+                    <li><span class="highlight">Alexander Isak:</span> #9</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td><strong>Extra official confirmation</strong></td>
+                <td>
+                  <ul class="clean">
+                    <li>LFC “Champions League squad list” includes: Alisson, Bradley, Ekitike, Endo, Frimpong, Gakpo, Gomez, Gravenberch, Isak, Jones, Kerkez, Konaté, Mac Allister, Mamardashvili, Robertson, Salah, Szoboszlai, Van Dijk, Wirtz, Woodman, etc.</li>
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="footer">
+          Sources: LFC squad numbers (2025–26), PL squad lists, LFC UCL submission
+        </div>
+      </div>
+
+      <!-- TAB 2: FULL SQUAD LIST (PL 25-MAN) -->
+      <div class="tabpanel" id="panel-full" role="tabpanel" aria-labelledby="tab-full">
+        <div class="table-wrap">
+          <table>
+            <caption>Full squad list — Premier League 25-man squad (published Feb 2026)</caption>
+            <thead>
+              <tr>
+                <th style="width: 28%;">Players</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul class="clean">
+                    <li>Owen Beck</li>
+                    <li>Alisson Becker</li>
+                    <li>Conor Bradley</li>
+                    <li>Federico Chiesa</li>
+                    <li>Harvey Davies</li>
+                    <li>Hugo Ekitike</li>
+                    <li>Wataru Endo</li>
+                    <li>Jeremie Frimpong</li>
+                    <li>Cody Gakpo</li>
+                    <li>Joe Gomez</li>
+                    <li>Ryan Gravenberch</li>
+                    <li>Alexander Isak</li>
+                    <li>Curtis Jones</li>
+                    <li>Milos Kerkez</li>
+                    <li>Ibrahima Konaté</li>
+                    <li>Alexis Mac Allister</li>
+                    <li>Giorgi Mamardashvili</li>
+                    <li>Calvin Ramsay</li>
+                    <li>Andrew Robertson</li>
+                    <li>Mohamed Salah</li>
+                    <li>Dominik Szoboszlai</li>
+                    <li>Virgil van Dijk</li>
+                    <li>Rhys Williams</li>
+                    <li>Florian Wirtz</li>
+                    <li>Freddie Woodman</li>
+                  </ul>
+                </td>
+                <td>
+                  This is the official Premier League 25-man squad list (“Squad players” list).
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="footer">
+          Source: Premier League 2025/26 updated squad lists
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    (function(){
+      const tabs = [
+        { btn: document.getElementById('tab-now'), panel: document.getElementById('panel-now') },
+        { btn: document.getElementById('tab-full'), panel: document.getElementById('panel-full') }
+      ];
+
+      function activate(index){
+        tabs.forEach((t, i) => {
+          const on = i === index;
+          t.btn.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.panel.classList.toggle('active', on);
+        });
+      }
+
+      tabs[0].btn.addEventListener('click', () => activate(0));
+      tabs[1].btn.addEventListener('click', () => activate(1));
+
+      // keyboard support
+      tabs.forEach((t, idx) => {
+        t.btn.addEventListener('keydown', (e) => {
+          if(e.key === 'ArrowRight') activate((idx + 1) % tabs.length);
+          if(e.key === 'ArrowLeft') activate((idx - 1 + tabs.length) % tabs.length);
+        });
+      });
+    })();
+  </script>
+
+  <script src="particles.js"></script>
+  <script src="scroll-animations.js"></script>
+</body>
+</html>

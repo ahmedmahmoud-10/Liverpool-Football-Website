@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liverpool FC — Live Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page">
+  <div class="bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Anfield%20stadium%20in%20May%202024.jpg');"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="badge">LFC</div>
+        <div>Liverpool FC</div>
+      </div>
+
+      <nav class="nav-links">
+        <a class="active" href="index.html">Live</a>
+        <a href="stadium.html">Stadium</a>
+        <a href="squad.html">Squad</a>
+        <a href="players.html">Players</a>
+        <a href="champions.html">Champions</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Live Status Hero -->
+    <section class="hero">
+      <div class="kicker">
+        <span class="dot pulse"></span>
+        <span id="live-status">LIVE UPDATES</span>
+      </div>
+      <h1>Liverpool FC Live Hub</h1>
+      <p>Real-time scores, fixtures, standings, and news — all in one place.</p>
+    </section>
+
+    <!-- Next Match Countdown -->
+    <section class="grid" id="next-match-section" style="display: none;">
+      <div class="card countdown-card" style="grid-column: span 12;">
+        <div class="countdown-header">
+          <h3>⚽ Next Match (DEMO)</h3>
+          <div class="live-badge">UPCOMING</div>
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <span class="team-name" id="next-home">Liverpool</span>
+          </div>
+          <div class="vs">VS</div>
+          <div class="team">
+            <span class="team-name" id="next-away">—</span>
+          </div>
+        </div>
+        <div class="countdown" id="countdown-timer">
+          <div class="time-block">
+            <span class="time-value" id="days">0</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="time-block">
+            <span class="time-value" id="hours">0</span>
+            <span class="time-label">Hours</span>
+          </div>
+          <div class="time-block">
+            <span class="time-value" id="minutes">0</span>
+            <span class="time-label">Mins</span>
+          </div>
+          <div class="time-block">
+            <span class="time-value" id="seconds">0</span>
+            <span class="time-label">Secs</span>
+          </div>
+        </div>
+        <p class="match-info" id="next-match-info">—</p>
+      </div>
+    </section>
+
+    <!-- Live/Recent Match Score -->
+    <section class="grid" id="live-match-section" style="display: none;">
+      <div class="card live-match-card" style="grid-column: span 12;">
+        <div class="countdown-header">
+          <h3>🔴 Live Match</h3>
+          <div class="live-badge pulsing">LIVE</div>
+        </div>
+        <div class="score-display">
+          <div class="team-score">
+            <span class="team-name" id="live-home">—</span>
+            <span class="score" id="live-home-score">0</span>
+          </div>
+          <div class="score-divider">—</div>
+          <div class="team-score">
+            <span class="score" id="live-away-score">0</span>
+            <span class="team-name" id="live-away">—</span>
+          </div>
+        </div>
+        <p class="match-status" id="live-status-text">—</p>
+      </div>
+    </section>
+
+    <!-- Quick Stats Grid -->
+    <section class="grid">
+      <div class="stat-card card">
+        <div class="stat-label">League Position</div>
+        <div class="stat-value" id="position-stat">—</div>
+      </div>
+
+      <div class="stat-card card">
+        <div class="stat-label">Points</div>
+        <div class="stat-value" id="points-stat">—</div>
+      </div>
+
+      <div class="stat-card card">
+        <div class="stat-label">Goal Difference</div>
+        <div class="stat-value" id="gd-stat">—</div>
+      </div>
+
+      <div class="stat-card card">
+        <div class="stat-label">Form</div>
+        <div class="stat-value form-display" id="form-stat">—</div>
+      </div>
+    </section>
+
+    <!-- Fixtures & Results Tabs -->
+    <section class="tabs" aria-label="Fixtures and Results">
+      <div class="tabbar" role="tablist">
+        <button class="tabbtn" id="tab-fixtures" role="tab" aria-selected="true" aria-controls="panel-fixtures">
+          Upcoming Fixtures
+        </button>
+        <button class="tabbtn" id="tab-results" role="tab" aria-selected="false" aria-controls="panel-results">
+          Recent Results
+        </button>
+        <button class="tabbtn" id="tab-standings" role="tab" aria-selected="false" aria-controls="panel-standings">
+          League Table
+        </button>
+      </div>
+
+      <!-- Fixtures Panel -->
+      <div class="tabpanel active" id="panel-fixtures" role="tabpanel">
+        <div class="fixtures-list" id="fixtures-list">
+          <div class="loading">Loading fixtures...</div>
+        </div>
+      </div>
+
+      <!-- Results Panel -->
+      <div class="tabpanel" id="panel-results" role="tabpanel">
+        <div class="fixtures-list" id="results-list">
+          <div class="loading">Loading results...</div>
+        </div>
+      </div>
+
+      <!-- Standings Panel -->
+      <div class="tabpanel" id="panel-standings" role="tabpanel">
+        <div class="table-wrap">
+          <table id="standings-table">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GD</th>
+                <th>Pts</th>
+              </tr>
+            </thead>
+            <tbody id="standings-body">
+              <tr><td colspan="8" class="loading">Loading standings...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="grid">
+      <a class="card" href="squad.html">
+        <h3>👥 Squad</h3>
+        <p>View the full Liverpool squad with confirmed numbers.</p>
+        <span class="cta">View Squad →</span>
+      </a>
+
+      <a class="card" href="champions.html">
+        <h3>🏆 Trophies</h3>
+        <p>Our glorious trophy cabinet and honours.</p>
+        <span class="cta">See Trophies →</span>
+      </a>
+    </section>
+
+    <div class="footer">
+      Data updates every 60 seconds • Powered by Football-Data.org API
+    </div>
+  </main>
+
+  <script src="particles.js"></script>
+  <script src="scroll-animations.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
